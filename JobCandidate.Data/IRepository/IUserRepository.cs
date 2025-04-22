@@ -2,7 +2,7 @@
 
 namespace JobCandidate.Data.IRepository
 {
-    internal interface IUserRepository
+    public  interface IUserRepository
     {
         public Task<User> CreateAsync(User user);
         public Task<User> UpdateAsync(User user);

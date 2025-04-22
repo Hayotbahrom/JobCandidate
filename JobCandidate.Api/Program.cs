@@ -1,4 +1,9 @@
 
+using JobCandidate.Data.DbContexts;
+using JobCandidate.Data.IRepository;
+using JobCandidate.Data.Repository;
+using Microsoft.EntityFrameworkCore;
+
 namespace JobCandidate.Api
 {
     public class Program
@@ -13,6 +18,12 @@ namespace JobCandidate.Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddDbContext<AppDbContext>(option
+                => option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+                );
+
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
 
             var app = builder.Build();
 
