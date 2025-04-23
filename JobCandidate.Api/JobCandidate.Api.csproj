@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JobCandidate.Data\JobCandidate.Data.csproj" />
+    <ProjectReference Include="..\JobCandidate.Service\JobCandidate.Service.csproj" />
   </ItemGroup>
 
 </Project>

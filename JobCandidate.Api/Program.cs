@@ -2,6 +2,9 @@
 using JobCandidate.Data.DbContexts;
 using JobCandidate.Data.IRepository;
 using JobCandidate.Data.Repository;
+using JobCandidate.Service.Interfaces;
+using JobCandidate.Service.Mappings;
+using JobCandidate.Service.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace JobCandidate.Api
@@ -19,10 +22,14 @@ namespace JobCandidate.Api
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            //registered dbContext
             builder.Services.AddDbContext<AppDbContext>(option
                 => option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 );
+            //automapper
+            builder.Services.AddAutoMapper(typeof(MappingProfile));
 
+            builder.Services.AddScoped<IIUserService, UserService>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
 
             var app = builder.Build();
