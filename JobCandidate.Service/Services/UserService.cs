@@ -23,12 +23,16 @@ namespace JobCandidate.Service.Services
                 .Where(u => u.Email == userDto.Email)
                 .FirstOrDefaultAsync();
 
-            var mapperUser = mapper.Map<User>(userDto);
+            var mappedUser = mapper.Map(userDto, existingUser);
 
             if (existingUser == null)
-                return await userRepository.CreateAsync(mapperUser);
-            else 
-                return await userRepository.UpdateAsync(mapperUser);
+                return await userRepository.CreateAsync(mappedUser);
+            else
+            {
+                mappedUser.UpdatedAt = DateTime.UtcNow;
+
+                return await userRepository.UpdateAsync(mappedUser);
+            }
         }
 
         public Task<User> CreateAsync(UserDto userDto)

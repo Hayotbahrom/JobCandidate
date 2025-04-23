@@ -16,10 +16,10 @@ namespace JobCandidate.Data.Repository
         }
         public async Task<User> CreateAsync(User user)
         {
-            await _appDbContext.AddAsync(user);
+            var result = (await _appDbContext.AddAsync(user)).Entity;
             await _appDbContext.SaveChangesAsync();
 
-            return user;
+            return result;
         }
 
         public async Task<bool> DeleteByIdAsync(int id)
@@ -47,10 +47,10 @@ namespace JobCandidate.Data.Repository
 
         public async Task<User> UpdateAsync(User user)
         {
-            _appDbContext.Update(user);
+            var result = (_appDbContext.Update(user)).Entity;
             await _appDbContext.SaveChangesAsync();
 
-            return user;
+            return result;
         }
     }
 }
