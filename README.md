@@ -11,7 +11,6 @@ This project was created as part of a test task for Sigma Software.
 - Entity Framework Core (Code First)
 - SQL Server 
 - AutoMapper
-- Onion Architecture
 - xUnit + Moq + MockQueryable.Moq (Unit Testing)
 - Swagger UI
 
