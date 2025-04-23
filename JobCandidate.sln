@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidate.Api", "JobCandidate.Api\JobCandidate.Api.csproj", "{700D584B-C8BE-43E0-A034-9607E0391B06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidate.Api", "JobCandidate.Api\JobCandidate.Api.csproj", "{700D584B-C8BE-43E0-A034-9607E0391B06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidate.Data", "JobCandidate.Data\JobCandidate.Data.csproj", "{316BBC91-26A7-42D4-80FD-552D93123C4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidate.Data", "JobCandidate.Data\JobCandidate.Data.csproj", "{316BBC91-26A7-42D4-80FD-552D93123C4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidate.Domain", "JobCandidate.Domain\JobCandidate.Domain.csproj", "{047A0420-F6E7-4125-B625-2700A9D53CFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidate.Domain", "JobCandidate.Domain\JobCandidate.Domain.csproj", "{047A0420-F6E7-4125-B625-2700A9D53CFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidate.Service", "JobCandidate.Service\JobCandidate.Service.csproj", "{B7337C11-19D6-44B5-B452-8682B2F78B93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobCandidate.Service", "JobCandidate.Service\JobCandidate.Service.csproj", "{B7337C11-19D6-44B5-B452-8682B2F78B93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobCandidate.Service.Tests", "JobCandidate.Service.Tests\JobCandidate.Service.Tests.csproj", "{2FAB7A08-88DD-430B-9A9B-71D9AE6119B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B7337C11-19D6-44B5-B452-8682B2F78B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7337C11-19D6-44B5-B452-8682B2F78B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7337C11-19D6-44B5-B452-8682B2F78B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FAB7A08-88DD-430B-9A9B-71D9AE6119B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FAB7A08-88DD-430B-9A9B-71D9AE6119B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FAB7A08-88DD-430B-9A9B-71D9AE6119B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FAB7A08-88DD-430B-9A9B-71D9AE6119B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
